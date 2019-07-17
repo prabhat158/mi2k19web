@@ -21,7 +21,7 @@ import { HomeComponent } from './home/home.component';
     AppRoutingModule,
     RouterModule.forRoot([
       {path:'',component:HomeComponent},
-      {path:'competition',component:CompetitionComponent},
+      {path:'competition', component:CompetitionComponent},
       {path:'contact',component:ContactComponent}
     ])
   ],
