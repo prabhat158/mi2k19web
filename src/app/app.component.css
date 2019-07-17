@@ -4,7 +4,8 @@
         background: #e03977;
         }
 
-          .button3 {
+        /* .button3 {
+
           background-color: #e03977;
           border: none;
           padding: 0 0;
@@ -13,7 +14,7 @@
           font-size: 40px;
           margin: 4px 2px;
           cursor: pointer;
-        }
+        } */
     
         .button1:hover {
           background-color: #4f2c84;
@@ -48,19 +49,20 @@
           font-family: 'Poppins';
           font-size: 20px;
           text-align: center;
-          padding: 14px 16px;
+          padding: 10px;
           text-decoration: none;
         }
     
         .btn-group .button2 {
-          background-color: #e03977;
+          /* background-color: #e03977; */
           border: none;
           color: white;
           padding: 0 5px;
           text-align: center;
           text-decoration: none;
           display: inline-block;
-          font-size: 16px;
+          /* height: 10px; */
+          
           cursor: pointer;
           float: left;
         }
@@ -95,7 +97,7 @@
         .btn.striped-shadow.white span {
           border-color: #fff;
           color: #fff;
-          background: #e03977;
+          /* background: #e03977; */
         }
     
         .btn {
