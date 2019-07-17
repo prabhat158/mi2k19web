@@ -1,3 +1,53 @@
-<p>
-  contact works!
-</p>
+<h1 style="font-size: 72px; font-weight:4000; position:fixed; justify-content: center; transform: translate(-50%);font-family: 'Poppins';">Contact Us</h1>
+
+<div class="organs" >
+	<div class="elements" *ngFor="let org of organs">
+		<h3><a href="/contact#{{org.id}}" title="{{org.body}}" class="{{org.body}}">{{org.body}}</a></h3>
+		
+	</div>
+</div>
+
+
+<div class="profile">
+<div *ngFor="let org of organs">
+	<div id="{{org.id}}" class="photo-container" *ngFor="let mem of org.members; index as num">
+		
+		<div class="image" id="img_{{num}}">
+		<img id="main-img" src="{{mem.img}}">
+		<div class="img-text">
+			<p style="padding:30px 0px ; text-align: center; width:100%; word-wrap: break-word; margin:1px 1px;"><b>{{mem.name}}</b></p></div>
+		<div class="overlay">
+			<div class="content">
+				<div class="phone-det">
+					<img class="overlay-icons" src="../assets/icon/phone.png" >
+					{{mem.phno}}
+				</div>
+				<div class="email-det">
+					<img class="overlay-icons" src="../assets/icon/mail.png" >
+					<a style="text-decoration:none; color:black; " href="{{mem.mail}}">{{mem.mail}}</a>
+				</div>
+				<div class="icons">
+					<a href="{{mem.fb}}">
+					<img id="overlay-fb" src="../assets/icon/fb.png" onmouseover="this.src='../assets/icon/fb-hover.png'" onmouseout="this.src='../assets/icon/fb.png'">
+					</a>
+					<a href="{{mem.in}}">
+					<img id="overlay-in" src="../assets/icon/in.png" onmouseover="this.src='../assets/icon/in-hover.png'" onmouseout="this.src='../assets/icon/in.png'">
+					</a>
+					<a href="{{mem.twitter}}">
+					<img id="overlay-twitter" src="../assets/icon/fb.png" onmouseover="this.src='../assets/icon/twitter-hover.png'" onmouseout="this.src='../assets/icon/twitter.png'">
+					</a>
+					<a href="{{mem.insta}}">
+					<img id="overlay-insta" src="../assets/icon/insta.png" onmouseover="this.src='../assets/icon/insta-hover.png'" onmouseout="this.src='../assets/icon/insta.png'">
+					</a>
+				</div>
+			</div>
+		</div>
+		</div>	
+	
+	</div>
+</div>
+</div>
+
+
+
+
