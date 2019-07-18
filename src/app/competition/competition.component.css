@@ -1,18 +1,20 @@
 .bg1 {
     z-index: -3;
-    size: cover;
-    position: fixed;
+    width:100%;
+    height:100%;
+    position: absolute;
     bottom: 0px;
     left: 0px;
 }
 
 .bg2 {
     z-index: -1;
-    size: cover;
-    background-position: center;
-    position: fixed;
-    bottom: -120px;
+    width:100%;
+    position: absolute;
+    bottom: 0px;
     left: 0px;
+    overflow: hidden;   
+    max-height: 120px;
 
 }
 
@@ -37,21 +39,22 @@ h1 {
 
 .scrolling-data {
     
+    position:absolute;
+    left: 0px;
+    top: 200px;
+    bottom: 116px;
     font-family: Verdana;
     font-size: 18px;
     overflow-y: auto;
     width: 100%;
     text-align: center;
-    margin-top: 200px;
-    height: 263px;
-    
 
 }
 
 .btn-group{
     
     width: 100%;
-    position: fixed;
+    position: absolute;
     text-align: center;
     left:0px;
 
