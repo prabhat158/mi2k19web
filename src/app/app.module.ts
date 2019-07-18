@@ -7,6 +7,11 @@ import { CompetitionComponent } from './competition/competition.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { AccommodationComponent } from './accommodation/accommodation.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { EventsComponent } from './events/events.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 
 
 @NgModule({
@@ -14,14 +19,24 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     CompetitionComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    AccommodationComponent,
+    RegistrationComponent,
+    EventsComponent,
+    FaqsComponent,
+    SponsorsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path:'',component:HomeComponent},
-      {path:'competition', component:CompetitionComponent},
+      {path:'accommodation',component:AccommodationComponent},
+      {path:'registration',component:RegistrationComponent},
+      {path:'events',component:EventsComponent},
+      {path:'competition',component:CompetitionComponent},
+      {path:'faqs',component:FaqsComponent},
+      {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent}
     ])
   ],

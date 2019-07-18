@@ -1,1 +1,67 @@
-<router-outlet></router-outlet>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome Page</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300&display=swap" rel="stylesheet">
+</head>
+
+
+
+<div> 
+
+  <ul style="z-index:999; background:url(assets/images/topbar.jpg); background-size: 100% 100%;"><br>
+
+      <li><a style="margin-right: 25px" class="button1" routerLink="contact"><b>CONTACT US</b></a></li>
+      <li><a class="button1" routerLink="sponsors"><b>SPONSORS</b></a></li>
+      <li><a class="button1" routerLink="faqs"><b>FAQs</b></a></li>
+      <li><a class="button1" routerLink="competition"><b>COMPETITIONS</b></a></li>
+      <li><a class="button1" routerLink="events"><b>EVENTS</b></a></li>
+      <li><a class="button1" routerLink="registration"><b>REGISTRATION</b></a></li>
+      <li><a class="button1" routerLink="accommodation"><b>ACCOMMODATION</b></a></li>
+
+  </ul>
+  
+
+ <!-- <img style="width: 100%;" src="assets/images/topbar.jpg"> -->
+
+<br><br><br><br><br><br>
+  
+  
+  <!-- <center><a class="button3" href="#" style="font-family: 'Poppins'; color: #ffe21f; letter-spacing: 1px;">REGISTER</a></center> -->
+
+
+  <div class="btn-group" style="position: absolute; left: 10px; bottom: 10px;z-index:999">
+
+      <a class="button2" href="#">
+          <img style="height: 35px;" src="assets/images/facebook button.png">
+      </a>
+      <a class="button2" href="#">
+          <img style="height: 35px;" src="assets/images/twitter button.png">
+      </a>
+      <a class="button2" href="#">
+          <img style="height: 35px;" src="assets/images/youtube button.png">
+      </a>
+      <a class="button2" href="#">
+          <img style="height: 35px;" src="assets/images/instagram button.png">
+      </a>
+      <a class="button2" href="#">
+          <img style="height: 35px;" src="assets/images/linkedin button.png">
+      </a>
+      <a class="button2" href="#">
+          <img style="height: 35px;" src="assets/images/snapchat button.png">
+      </a>
+  </div>
+
+
+  <!-- <div style="position: absolute; right: 10px; bottom: 10px">
+
+      <button class="btn striped-shadow white"><span><b>CONTACT US</b></span></button>
+  </div> -->
+
+</div>
+
+<div style="position: relative; top:0.5em; top:100px">
+  <router-outlet></router-outlet>
+</div>
+
+
