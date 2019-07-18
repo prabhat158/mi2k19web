@@ -7,9 +7,15 @@ import { CompetitionComponent } from './competition/competition.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { AccommodationComponent } from './accommodation/accommodation.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { EventsComponent } from './events/events.component';
+import { FaqsComponent } from './faqs/faqs.component';
+import { SponsorsComponent } from './sponsors/sponsors.component';
 import { CompetitionListComponent } from './competition/competition-list/competition-list.component';
 import { CompetitionMainComponent } from './competition/competition-main/competition-main.component';
 import { HttpClientModule } from '@angular/common/http';
+
 
 
 @NgModule({
@@ -18,6 +24,11 @@ import { HttpClientModule } from '@angular/common/http';
     CompetitionComponent,
     ContactComponent,
     HomeComponent,
+    AccommodationComponent,
+    RegistrationComponent,
+    EventsComponent,
+    FaqsComponent,
+    SponsorsComponent
     CompetitionListComponent,
     CompetitionMainComponent
   ],
@@ -26,6 +37,12 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     RouterModule.forRoot([
       {path:'',component:HomeComponent},
+      {path:'accommodation',component:AccommodationComponent},
+      {path:'registration',component:RegistrationComponent},
+      {path:'events',component:EventsComponent},
+      {path:'faqs',component:FaqsComponent},
+      {path:'sponsors',component:SponsorsComponent},
+      {path:'contact',component:ContactComponent}
       {
         path:'competition',
         component:CompetitionComponent,
@@ -34,7 +51,6 @@ import { HttpClientModule } from '@angular/common/http';
           {path: ':compiName', component: CompetitionListComponent}
         ]
       },
-      {path:'contact',component:ContactComponent},
     ]),
     HttpClientModule
   ],
