@@ -1,15 +1,17 @@
-<h1 style="font-size: 72px; font-weight:4000; position:fixed; justify-content: center; transform: translate(-50%);font-family: 'Poppins';">Contact Us</h1>
-
+<div class="back">
+<div style="left:40%; bottom:90%; position:fixed;">
+<h1 style="font-size: 72px; font-weight:4000; position:fixed; font-family: 'Poppins';">Contact Us</h1>
+</div>
 <div class="organs" >
 	<div class="elements" *ngFor="let org of organs">
-		<h3><a href="/contact#{{org.id}}" title="{{org.body}}" class="{{org.body}}">{{org.body}}</a></h3>
+		<h3><a href="/contact#{{org.id}}" title="{{org.body}}" >{{org.body}}</a></h3>
 		
 	</div>
 </div>
 
 
 <div class="profile">
-<div *ngFor="let org of organs">
+	<div *ngFor="let org of organs">
 	<div id="{{org.id}}" class="photo-container" *ngFor="let mem of org.members; index as num">
 		
 		<div class="image" id="img_{{num}}">
@@ -34,7 +36,7 @@
 					<img id="overlay-in" src="../assets/icon/in.png" onmouseover="this.src='../assets/icon/in-hover.png'" onmouseout="this.src='../assets/icon/in.png'">
 					</a>
 					<a href="{{mem.twitter}}">
-					<img id="overlay-twitter" src="../assets/icon/fb.png" onmouseover="this.src='../assets/icon/twitter-hover.png'" onmouseout="this.src='../assets/icon/twitter.png'">
+					<img id="overlay-twitter" src="../assets/icon/twitter.png" onmouseover="this.src='../assets/icon/twitter-hover.png'" onmouseout="this.src='../assets/icon/twitter.png'">
 					</a>
 					<a href="{{mem.insta}}">
 					<img id="overlay-insta" src="../assets/icon/insta.png" onmouseover="this.src='../assets/icon/insta-hover.png'" onmouseout="this.src='../assets/icon/insta.png'">
@@ -43,11 +45,10 @@
 			</div>
 		</div>
 		</div>	
-	
+	</div>
 	</div>
 </div>
+
 </div>
-
-
 
 
