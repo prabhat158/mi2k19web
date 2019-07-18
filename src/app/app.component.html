@@ -5,6 +5,8 @@
   <link href="https://fonts.googleapis.com/css?family=Poppins:300&display=swap" rel="stylesheet">
 </head>
 
+
+
 <div> 
 
   <ul style="z-index:999; background:url(assets/images/topbar.jpg); background-size: 100% 100%;"><br>
@@ -23,10 +25,13 @@
  <!-- <img style="width: 100%;" src="assets/images/topbar.jpg"> -->
 
 <br><br><br><br><br><br>
-
+  
+  
   <!-- <center><a class="button3" href="#" style="font-family: 'Poppins'; color: #ffe21f; letter-spacing: 1px;">REGISTER</a></center> -->
 
-  <div class="btn-group" style="position: absolute; left: 10px; bottom: 10px;">
+
+  <div class="btn-group" style="position: absolute; left: 10px; bottom: 10px;z-index:999">
+
       <a class="button2" href="#">
           <img style="height: 35px;" src="assets/images/facebook button.png">
       </a>
@@ -47,11 +52,16 @@
       </a>
   </div>
 
+
   <!-- <div style="position: absolute; right: 10px; bottom: 10px">
+
       <button class="btn striped-shadow white"><span><b>CONTACT US</b></span></button>
   </div> -->
 
-
-<router-outlet></router-outlet>
 </div>
+
+<div style="position: relative; top:0.5em; top:100px">
+  <router-outlet></router-outlet>
+</div>
+
 
