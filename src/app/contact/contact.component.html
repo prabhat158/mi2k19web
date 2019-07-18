@@ -1,3 +1,72 @@
-<p>
-  contact works!
-</p>
+<img src='../../assets/contactus/contactb.jpg' class="bg1">
+
+<h1 class="heading">Contact Us</h1>
+
+<div class="btn-group grp1">
+
+  <a href="/contact#comp"><button>Competitions & LYP</button></a>
+  <a href="/contact#creatives"><button>Creatives</button></a>
+  <a href="/contact#f&b"><button>Food & Beverages</button></a>
+  <a href="/contact#h&w"><button>Horizons & Workshops</button></a>
+  <a href="/contact#hospi"><button>Hospitality & Assistance</button></a><br>
+
+	<!-- <a *ngFor="let org of organs" href="/contact#{{org.id}}" title="{{org.body}}" >{{org.body}}</a> -->
+
+
+    <a href="/contact#informal"><button>Informals</button></a>
+    <a href="/contact#mark"><button>Marketing</button></a>
+    <a href="/contact#m&p"><button>Media & Publicity</button></a>
+    <a href="/contact#pro"><button>Pronites</button></a>
+    <a href="/contact#l&o"><button>Logistics & Oprations</button></a>
+
+    <!-- <a *ngFor="let org of organs" href="/contact#{{org.id}}" title="{{org.body}}" >{{org.body}}</a> -->
+</div>
+
+
+<div class='scrolling-data'>
+
+        <div class="profile">
+          <div id="{{org.id}}" *ngFor="let org of organs">
+              <h3 style="margin: 0">{{org.body}}</h3>
+          <div  class="photo-container" *ngFor="let mem of org.members; index as num">
+            
+            <div class="image" id="img_{{num}}">
+            <img id="main-img" src="{{mem.img}}">
+            <div class="img-text">
+              <p style=" text-align: center; width:100%; word-wrap: break-word; margin:1px 1px;"><b>{{mem.name}}</b></p></div>
+            <div class="overlay">
+              <div class="content">
+                <div class="phone-det">
+                  <img class="overlay-icons" src="../assets/icon/phone.png" >
+                  {{mem.phno}}
+                </div>
+                <div class="email-det">
+                  <img class="overlay-icons" src="../assets/icon/mail.png" >
+                  <a style="text-decoration:none; color:black; " href="{{mem.mail}}">{{mem.mail}}</a>
+                </div>
+                <div class="icons">
+                  <a href="{{mem.fb}}">
+                  <img id="overlay-fb" src="../assets/icon/fb.png" onmouseover="this.src='../assets/icon/fb-hover.png'" onmouseout="this.src='../assets/icon/fb.png'">
+                  </a>
+                  <a href="{{mem.in}}">
+                  <img id="overlay-in" src="../assets/icon/in.png" onmouseover="this.src='../assets/icon/in-hover.png'" onmouseout="this.src='../assets/icon/in.png'">
+                  </a>
+                  <a href="{{mem.twitter}}">
+                  <img id="overlay-twitter" src="../assets/icon/twitter.png" onmouseover="this.src='../assets/icon/twitter-hover.png'" onmouseout="this.src='../assets/icon/twitter.png'">
+                  </a>
+                  <a href="{{mem.insta}}">
+                  <img id="overlay-insta" src="../assets/icon/insta.png" onmouseover="this.src='../assets/icon/insta-hover.png'" onmouseout="this.src='../assets/icon/insta.png'">
+                  </a>
+                </div>
+              </div>
+            </div>
+            </div>	
+          </div>
+          </div>
+        </div>
+        
+</div>
+
+
+    
+    
