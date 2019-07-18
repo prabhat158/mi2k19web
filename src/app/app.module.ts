@@ -7,6 +7,9 @@ import { CompetitionComponent } from './competition/competition.component';
 import { ContactComponent } from './contact/contact.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { CompetitionListComponent } from './competition/competition-list/competition-list.component';
+import { CompetitionMainComponent } from './competition/competition-main/competition-main.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -14,16 +17,26 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     CompetitionComponent,
     ContactComponent,
-    HomeComponent
+    HomeComponent,
+    CompetitionListComponent,
+    CompetitionMainComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path:'',component:HomeComponent},
-      {path:'competition',component:CompetitionComponent},
-      {path:'contact',component:ContactComponent}
-    ])
+      {
+        path:'competition',
+        component:CompetitionComponent,
+        children: [
+          {path: '', component: CompetitionMainComponent },
+          {path: ':compiName', component: CompetitionListComponent}
+        ]
+      },
+      {path:'contact',component:ContactComponent},
+    ]),
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
