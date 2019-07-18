@@ -1,0 +1,47 @@
+h1 {
+    left:0px;
+    position:fixed;
+    width:100%;
+    text-align: center;
+    font-size: 50px;
+    font-family: Verdana;
+    margin-top: 125px;
+}
+
+.btn-group{
+    position:absolute;
+    left:0px;
+    top: 210px;
+    bottom: 116px;
+    font-family: Verdana;
+    font-size: 18px;
+    overflow-y: auto;
+    width: 80%;
+    text-align: center;
+    margin-left: 10%;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.button{
+    cursor:pointer;
+    display: inline-block;
+    width: 40%;
+    height: auto;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 2em;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.button:hover{
+    border: groove black!important;
+    border-width: 0 1px;
+}
+
+.btn-group::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
