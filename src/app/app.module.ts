@@ -28,7 +28,7 @@ import { HttpClientModule } from '@angular/common/http';
     RegistrationComponent,
     EventsComponent,
     FaqsComponent,
-    SponsorsComponent
+    SponsorsComponent,
     CompetitionListComponent,
     CompetitionMainComponent
   ],
@@ -42,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
       {path:'events',component:EventsComponent},
       {path:'faqs',component:FaqsComponent},
       {path:'sponsors',component:SponsorsComponent},
-      {path:'contact',component:ContactComponent}
+      {path:'contact',component:ContactComponent},
       {
         path:'competition',
         component:CompetitionComponent,

@@ -1,8 +1,10 @@
+<b><h1>Competitions</h1></b>
 
 <div *ngFor="let category of competitions_categories">
-  <div *ngIf="category.name == current_competition_category">
-    <div *ngFor="let event of category.events">
-      <h2>{{event.name}}</h2>
+  <div class="btn-group" *ngIf="category.name == current_competition_category">
+    <div class="button" *ngFor="let event of category.events">
+     <b> {{event.name}} </b> <br>
+      {{event.subtitle}}
     </div>
   </div>
 </div>
