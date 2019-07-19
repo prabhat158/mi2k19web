@@ -18,7 +18,7 @@ export class CompetitionListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.http.get('http://api2.moodi.org/events/')
+    this.http.get('https://api2.moodi.org/events/')
     .subscribe(
       data=> {
         this.competitions_categories = data['Competitions'];
