@@ -16,7 +16,6 @@ export class CompetitionComponent implements OnInit {
 
   onClick(button){
     this.clickedButton = button;
-    console.log(button);
   }
 
 }
