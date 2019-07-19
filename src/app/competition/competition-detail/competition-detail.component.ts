@@ -3,15 +3,16 @@ import { ActivatedRoute } from '@angular/router';
 import { CompetitionDataService } from '../competition-data.service';
 
 @Component({
-  selector: 'app-competition-list',
-  templateUrl: './competition-list.component.html',
-  styleUrls: ['./competition-list.component.css']
+  selector: 'app-competition-detail',
+  templateUrl: './competition-detail.component.html',
+  styleUrls: ['./competition-detail.component.css']
 })
-export class CompetitionListComponent implements OnInit {
+export class CompetitionDetailComponent implements OnInit {
 
   competitions_categories: any[];
   current_competition_category: string;
-
+  current_event: string;
+  
   constructor(
     private route: ActivatedRoute,
     private dataService: CompetitionDataService
@@ -31,9 +32,10 @@ export class CompetitionListComponent implements OnInit {
     this.getCategories();
     this.route.params.subscribe(
       params => {
-        this.current_competition_category = params.compiName
+        this.current_competition_category = params.compiName,
+        this.current_event = params.eventName
       }
     );
-    }
+  }
 
 }

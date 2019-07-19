@@ -36,6 +36,7 @@ h1 {
     margin-right: 10px;
 }
 
+
 .button:hover{
     border: groove black!important;
     border-width: 0 1px;
@@ -44,4 +45,9 @@ h1 {
 .btn-group::-webkit-scrollbar { /* WebKit */
     width: 0;
     height: 0;
+}
+
+a {
+    text-decoration:none;
+    color: inherit;
 }
