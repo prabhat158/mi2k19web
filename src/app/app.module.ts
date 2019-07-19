@@ -16,6 +16,11 @@ import { CompetitionListComponent } from './competition/competition-list/competi
 import { CompetitionMainComponent } from './competition/competition-main/competition-main.component';
 import { HttpClientModule } from '@angular/common/http';
 import { CompetitionDetailComponent } from './competition/competition-detail/competition-detail.component';
+import { CompDescRulesComponent } from './competition/competition-detail/comp-desc-rules/comp-desc-rules.component';
+import { CompPrizesComponent } from './competition/competition-detail/comp-prizes/comp-prizes.component';
+import { CompFaqComponent } from './competition/competition-detail/comp-faq/comp-faq.component';
+import { CompRegComponent } from './competition/competition-detail/comp-reg/comp-reg.component';
+import { CompPrevWinnerComponent } from './competition/competition-detail/comp-prev-winner/comp-prev-winner.component';
 
 
 
@@ -32,7 +37,12 @@ import { CompetitionDetailComponent } from './competition/competition-detail/com
     SponsorsComponent,
     CompetitionListComponent,
     CompetitionMainComponent,
-    CompetitionDetailComponent
+    CompetitionDetailComponent,
+    CompDescRulesComponent,
+    CompPrizesComponent,
+    CompFaqComponent,
+    CompRegComponent,
+    CompPrevWinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -51,7 +61,18 @@ import { CompetitionDetailComponent } from './competition/competition-detail/com
         children: [
           {path: '', component: CompetitionMainComponent },
           {path: ':compiName', component: CompetitionListComponent},
-          {path: ':compiName/:eventName', component: CompetitionDetailComponent }
+          {
+            path: ':compiName/:eventName',
+            component: CompetitionDetailComponent,
+            children: [
+              {path: '', redirectTo: 'comp-desc', pathMatch:'full'},
+              {path: 'comp-desc', component:CompDescRulesComponent},
+              {path: 'comp-prizes', component:CompPrizesComponent},
+              {path: 'comp-faq', component:CompFaqComponent},
+              {path: 'comp-reg', component:CompRegComponent},
+              {path: 'comp-prev-winner', component:CompPrevWinnerComponent},
+            ]
+          }
         ]
       },
     ]),
