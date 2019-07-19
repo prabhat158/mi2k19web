@@ -1,0 +1,25 @@
+<div *ngFor="let category of competitions_categories">
+  <div class="btn-group" *ngIf="category.name == current_competition_category">
+    <div *ngFor="let event of category.events">
+      <div *ngIf="event.name == current_event">
+
+
+        <h1>{{event.name}}</h1>
+
+        <div class="btn-group" style="bottom:75px">
+            <a routerLink="Music"><button>Description & Rules</button></a>
+            <a routerLink="Dance"><button>Prizes & LYPs</button></a>
+            <a routerLink="Speaking Arts"><button>FAQs</button></a>
+        </div>
+    
+        <div class="btn-group" style="bottom:40px">
+            <a routerLink="Register"><button>DESIGN AND DIGITAL ARTS</button></a>
+            <a routerLink="Previous Winners"><button>DRAMATICS</button></a>
+        </div>
+
+
+
+      </div>
+    </div>
+  </div>
+</div>

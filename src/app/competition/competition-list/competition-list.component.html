@@ -2,9 +2,9 @@
 
 <div *ngFor="let category of competitions_categories">
   <div class="btn-group" *ngIf="category.name == current_competition_category">
-    <div class="button" *ngFor="let event of category.events">
-     <b> {{event.name}} </b> <br>
+    <a *ngFor="let event of category.events" class="button" routerLink="{{event.name}}">
+      <b> {{event.name}} </b> <br>
       {{event.subtitle}}
-    </div>
+    </a>
   </div>
 </div>

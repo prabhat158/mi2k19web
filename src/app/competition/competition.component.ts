@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CompetitionComponent implements OnInit {
 
+  clickedButton:string;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onClick(button){
+    this.clickedButton = button;
+    console.log(button);
   }
 
 }

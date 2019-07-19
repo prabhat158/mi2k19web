@@ -15,6 +15,7 @@ import { SponsorsComponent } from './sponsors/sponsors.component';
 import { CompetitionListComponent } from './competition/competition-list/competition-list.component';
 import { CompetitionMainComponent } from './competition/competition-main/competition-main.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CompetitionDetailComponent } from './competition/competition-detail/competition-detail.component';
 
 
 
@@ -30,7 +31,8 @@ import { HttpClientModule } from '@angular/common/http';
     FaqsComponent,
     SponsorsComponent,
     CompetitionListComponent,
-    CompetitionMainComponent
+    CompetitionMainComponent,
+    CompetitionDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +50,8 @@ import { HttpClientModule } from '@angular/common/http';
         component:CompetitionComponent,
         children: [
           {path: '', component: CompetitionMainComponent },
-          {path: ':compiName', component: CompetitionListComponent}
+          {path: ':compiName', component: CompetitionListComponent},
+          {path: ':compiName/:eventName', component: CompetitionDetailComponent }
         ]
       },
     ]),
