@@ -52,8 +52,24 @@ h1 {
 
 .description{
     position: absolute;
-    top: 280px;
-    text-align:center;
-    left: 0px;
-    width:100%;
+    top: 290px;
+    bottom: 116px;
+    text-align:left;
+    left: 310px;
+    right: 310px;
+    overflow-y: auto;
+    font-family: Verdana;
+    font-size: 14px;
+    
 }
+
+.description {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+.description::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+

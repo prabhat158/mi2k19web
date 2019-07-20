@@ -9,6 +9,8 @@ import { CompetitionDataService } from '../competition-data.service';
 })
 export class CompetitionDetailComponent implements OnInit {
 
+  clickedButton:string;
+
   competitions_categories: any[];
   current_competition_category: string;
   current_event: string;
@@ -27,8 +29,13 @@ export class CompetitionDetailComponent implements OnInit {
     );
   }  
 
+  onClick(button){
+    this.clickedButton = button;
+  }
+
   ngOnInit() {
     
+    this.clickedButton='desc';
     this.getCategories();
     this.route.params.subscribe(
       params => {
