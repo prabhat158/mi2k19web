@@ -12,6 +12,7 @@ export class CompetitionComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    this.clickedButton='';
   }
 
   onClick(button){
