@@ -3,7 +3,8 @@
     <div *ngFor="let event of category.events">
       <div *ngIf="event.name == current_event">
 
-
+        <img onerror="this.style.visibility = 'hidden'" src="../../../assets/competition-images/{{category.name}}1.png" class="image1">
+        <img onerror="this.style.visibility = 'hidden'" src="../../../assets/competition-images/{{category.name}}2.png" class="image2">
         <h1>{{event.name}}</h1>
 
         <div class="btn-group" style="top:195px">
