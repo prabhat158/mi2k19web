@@ -72,4 +72,19 @@ h1 {
     height: 0;
 }
 
+.image1 {
+    width:15em;
+    bottom: 117px;
+    position: absolute;
+    left: 40px;
+    overflow: hidden!important ;
+}
+
+.image2 {
+    width:13em;
+    top: 125px;
+    position: absolute;
+    right: 40px;
+    overflow: hidden!important ;
+}
 
