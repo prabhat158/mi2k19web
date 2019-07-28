@@ -21,6 +21,9 @@ import { CompPrizesComponent } from './competition/competition-detail/comp-prize
 import { CompFaqComponent } from './competition/competition-detail/comp-faq/comp-faq.component';
 import { CompRegComponent } from './competition/competition-detail/comp-reg/comp-reg.component';
 import { CompPrevWinnerComponent } from './competition/competition-detail/comp-prev-winner/comp-prev-winner.component';
+import { RegFormComponent } from './registration/reg-form/reg-form.component';
+import { RegHomeComponent } from './registration/reg-home/reg-home.component';
+import { RegProfileComponent } from './registration/reg-profile/reg-profile.component';
 
 
 
@@ -42,7 +45,10 @@ import { CompPrevWinnerComponent } from './competition/competition-detail/comp-p
     CompPrizesComponent,
     CompFaqComponent,
     CompRegComponent,
-    CompPrevWinnerComponent
+    CompPrevWinnerComponent,
+    RegFormComponent,
+    RegHomeComponent,
+    RegProfileComponent
   ],
   imports: [
     BrowserModule,
@@ -50,7 +56,15 @@ import { CompPrevWinnerComponent } from './competition/competition-detail/comp-p
     RouterModule.forRoot([
       {path:'',component:HomeComponent},
       {path:'accommodation',component:AccommodationComponent},
-      {path:'registration',component:RegistrationComponent},
+      {
+        path:'registration',
+        component:RegistrationComponent,
+        children: [
+          {path:'', component: RegHomeComponent},
+          {path:'profile', component: RegProfileComponent},
+          {path: 'form', component: RegFormComponent},
+        ]
+      },
       {path:'events',component:EventsComponent},
       {path:'faqs',component:FaqsComponent},
       {path:'sponsors',component:SponsorsComponent},

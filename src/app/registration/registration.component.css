@@ -1,0 +1,34 @@
+.back{
+    height:100%;
+	width:100%;
+	z-index:-3;
+	position:fixed;
+    background: #ffcdd2;
+    background-repeat: no-repeat;
+    background-position: right;
+	left:0;
+    top:0;
+    overflow: auto;
+}
+
+h1 {
+    left:0px;
+    position:fixed;
+    width:100%;
+    text-align: left;
+    font-size: 50px;
+    font-family: Verdana;
+    margin-top: 135px;
+    margin-left: 250px;
+}
+
+.bg1 {
+    background-color: #ffcdd2;
+    z-index: -4;
+    width:65%;
+    height:100%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+}
+
