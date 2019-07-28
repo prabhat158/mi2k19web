@@ -9,8 +9,15 @@
   <meta name="google-signin-scope" content="profile email">
   <meta name="google-sinin-client_id" content="511498944970-b2g59f8sj5h2c20vhkim5tkrpcn9sckc.apps.googleusercontent.com
   ">
-  <script src="https://apis.google.com/js/api.js" async defer> </script>
-
+ 
+<script src="https://apis.google.com/js/platform.js?onload=onLoadCallback" async defer></script>
+<script>
+window.onLoadCallback = function(){
+  gapi.auth2.init({
+      client_id: '511498944970-b2g59f8sj5h2c20vhkim5tkrpcn9sckc.apps.googleusercontent.com'
+    });
+}
+</script>
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body style="margin: 0px">
