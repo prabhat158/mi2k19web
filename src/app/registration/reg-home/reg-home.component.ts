@@ -10,7 +10,6 @@ declare const gapi: any;
   styleUrls: ['./reg-home.component.css']
 })
 export class RegHomeComponent implements OnInit {
-
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -50,8 +49,10 @@ export class RegHomeComponent implements OnInit {
   onClick(){
     this.http.get(this.url+'/'+this.gID)
       .subscribe(
-        data => console.log(data),
-        error => this.router.navigate(['/profile'],{relativeTo: this.activatedRoute.parent})
+        data => {console.log(data),
+          this.router.navigate(['profile'],{relativeTo: this.activatedRoute.parent})
+        },
+        error => this.router.navigate(['form'],{relativeTo: this.activatedRoute.parent})
       )
   }
 

@@ -17,7 +17,18 @@
           background-color: #4f2c84;
           color: white;
         }
-    
+    .header{
+      z-index:999; 
+      background:url("../assets/images/topbar.jpg"); 
+      background-size: 100% 100%;
+    }
+    @media only screen and (max-width: 800px) {
+      .header{
+        z-index:999; 
+        background:url("../assets/home/Topbarmobile.png"); 
+        background-size: 100% 100%;
+      }
+    }
         ul {
           list-style-type: none;
           margin: 0;
