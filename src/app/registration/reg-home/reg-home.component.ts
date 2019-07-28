@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Router, ActivatedRoute } from '@angular/router';
 
 declare const gapi: any;
-
 
 @Component({
   selector: 'app-reg-home',
@@ -10,7 +11,18 @@ declare const gapi: any;
 })
 export class RegHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+    private router: Router,
+    private activatedRoute: ActivatedRoute
+  ) { }
+
+  public gID: number;
+  public name: string;
+  public imageURL: string;
+  public email: string;
+  private url: string = "http://api2.moodi.org/user";
+  
 
   public auth2:any;
   public googleInit(){
@@ -27,20 +39,25 @@ export class RegHomeComponent implements OnInit {
     this.auth2.attachClickHandler(element, {},
       (googleUser)=> {
         let profile=googleUser.getBasicProfile();
-        console.log('Token || ' + googleUser.getAuthResponse().id_token);
-        console.log('ID: ' + profile.getId());
-        console.log('Name: ' + profile.getName());
-        console.log('Image URL: ' + profile.getImageUrl());
-        console.log('Email: ' + profile.getEmail());
-      }, (error) => {
-        alert(JSON.stringify(error, undefined, 2));
+        this.gID=profile.getId();
+        this.name= profile.getName();
+        this.imageURL=profile.getImageUrl();
+        this.email=profile.getEmail();
+        this.onClick();
       });
+  }
+
+  onClick(){
+    this.http.get(this.url+'/'+this.gID)
+      .subscribe(
+        data => console.log(data),
+        error => this.router.navigate(['/profile'],{relativeTo: this.activatedRoute.parent})
+      )
   }
 
   ngAfterViewInit(){
     this.googleInit();
   }
-
 
   ngOnInit() {
   }
