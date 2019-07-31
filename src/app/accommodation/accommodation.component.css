@@ -4,12 +4,19 @@
 	z-index:-3;
 	position:fixed;
     background: #ffcdd2;
-    background-image: url("/assets/accommodation-images/Tent.png");
-    background-repeat: no-repeat;
-    background-position: right;
 	left:0;
     top:0;
     overflow: auto;
+}
+
+.bg1 {
+    background-color: #ffcdd2;
+    z-index: -4;
+    width:50%;
+    height:95%;
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
 }
 
 .heading {

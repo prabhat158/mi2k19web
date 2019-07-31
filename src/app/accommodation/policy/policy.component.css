@@ -1,0 +1,21 @@
+.scrolling-data {
+    
+    position:absolute;
+    left: 30%;
+    right: 30%;
+    top: 38%;
+    bottom: 20%;
+    font-family: Verdana;
+    font-size: 24px;
+    overflow-y: auto;
+    background-color: white;
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+
+}
+
+.scrolling-data::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
+}

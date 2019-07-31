@@ -24,6 +24,11 @@ import { CompPrevWinnerComponent } from './competition/competition-detail/comp-p
 import { RegFormComponent } from './registration/reg-form/reg-form.component';
 import { RegHomeComponent } from './registration/reg-home/reg-home.component';
 import { RegProfileComponent } from './registration/reg-profile/reg-profile.component';
+import { SecurityGuidelinesComponent } from './accommodation/security-guidelines/security-guidelines.component';
+import { ReachUsComponent } from './accommodation/reach-us/reach-us.component';
+import { FaqComponent } from './accommodation/faq/faq.component';
+import { PolicyComponent } from './accommodation/policy/policy.component';
+import { KnowYourClComponent } from './accommodation/know-your-cl/know-your-cl.component';
 
 
 
@@ -48,14 +53,28 @@ import { RegProfileComponent } from './registration/reg-profile/reg-profile.comp
     CompPrevWinnerComponent,
     RegFormComponent,
     RegHomeComponent,
-    RegProfileComponent
+    RegProfileComponent,
+    SecurityGuidelinesComponent,
+    ReachUsComponent,
+    FaqComponent,
+    PolicyComponent,
+    KnowYourClComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
       {path:'',component:HomeComponent},
-      {path:'accommodation',component:AccommodationComponent},
+      {path:'accommodation',component:AccommodationComponent,
+      children: [
+        {path: 'security-guidelines', component: SecurityGuidelinesComponent},
+        {path: 'reach-us', component: ReachUsComponent},
+        {path: 'faq', component: FaqComponent},
+        {path: 'policy-&-charges', component: PolicyComponent},
+        {path: 'know-your-cl', component: KnowYourClComponent},
+      ]
+    },
+      
       {
         path:'registration',
         component:RegistrationComponent,
