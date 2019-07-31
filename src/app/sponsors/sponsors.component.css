@@ -6,7 +6,16 @@
 	background:orange;
 	left:0;
     top:0;
-    overflow: auto;
+    overflow-y: auto;
+
+
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.back::-webkit-scrollbar { /* WebKit */
+    width: 0;
+    height: 0;
 }
 
 .icon{
@@ -16,7 +25,7 @@
 }
 
 .icon img{
-    width: 60%;
+    width: 200px;
 }
 
 .icon img:hover{
