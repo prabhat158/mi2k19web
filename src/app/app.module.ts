@@ -29,6 +29,7 @@ import { ReachUsComponent } from './accommodation/reach-us/reach-us.component';
 import { FaqComponent } from './accommodation/faq/faq.component';
 import { PolicyComponent } from './accommodation/policy/policy.component';
 import { KnowYourClComponent } from './accommodation/know-your-cl/know-your-cl.component';
+import { ErrorComponent } from './error/error.component';
 
 
 
@@ -58,12 +59,16 @@ import { KnowYourClComponent } from './accommodation/know-your-cl/know-your-cl.c
     ReachUsComponent,
     FaqComponent,
     PolicyComponent,
-    KnowYourClComponent
+    KnowYourClComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
+      
+
+
       {path:'',component:HomeComponent},
       {path:'accommodation',component:AccommodationComponent,
       children: [
@@ -105,9 +110,12 @@ import { KnowYourClComponent } from './accommodation/know-your-cl/know-your-cl.c
               {path: 'comp-reg', component:CompRegComponent},
               {path: 'comp-prev-winner', component:CompPrevWinnerComponent},
             ]
-          }
+          },
+          
         ]
       },
+      {path: '404', component: ErrorComponent},
+{ path: '**', redirectTo: '404' },
     ]),
     HttpClientModule
   ],
