@@ -27,7 +27,6 @@ import { CompPrevWinnerComponent } from './competition/competition-detail/comp-p
 import { RegFormComponent } from './registration/reg-form/reg-form.component';
 import { RegHomeComponent } from './registration/reg-home/reg-home.component';
 import { RegProfileComponent } from './registration/reg-profile/reg-profile.component';
-import {Ng2AutoCompleteModule} from 'ng2-auto-complete';
 import { SecurityGuidelinesComponent } from './accommodation/security-guidelines/security-guidelines.component';
 import { ReachUsComponent } from './accommodation/reach-us/reach-us.component';
 import { FaqComponent } from './accommodation/faq/faq.component';
@@ -68,7 +67,6 @@ import { ErrorComponent } from './error/error.component';
   ],
   imports: [
     FormsModule,
-    Ng2AutoCompleteModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
