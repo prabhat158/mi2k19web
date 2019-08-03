@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { map } from 'rxjs/operators';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -24,6 +27,7 @@ import { CompPrevWinnerComponent } from './competition/competition-detail/comp-p
 import { RegFormComponent } from './registration/reg-form/reg-form.component';
 import { RegHomeComponent } from './registration/reg-home/reg-home.component';
 import { RegProfileComponent } from './registration/reg-profile/reg-profile.component';
+import {Ng2AutoCompleteModule} from 'ng2-auto-complete';
 
 
 
@@ -51,6 +55,8 @@ import { RegProfileComponent } from './registration/reg-profile/reg-profile.comp
     RegProfileComponent
   ],
   imports: [
+    FormsModule,
+    Ng2AutoCompleteModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
@@ -90,7 +96,8 @@ import { RegProfileComponent } from './registration/reg-profile/reg-profile.comp
         ]
       },
     ]),
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

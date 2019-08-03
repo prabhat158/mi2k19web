@@ -1,3 +1,73 @@
-<p>
-  reg-form works!
-</p>
+<div class="scrolling-data">
+<form [formGroup]="form" class="form-inline">
+  <table>
+    <tr>
+      <td><label class="element">Name*:</label></td>
+      <td><input class="phd" type="text" placeholder="Your name ..." name="name" required></td>
+    </tr>
+    <tr>
+      <td><label class="element">E-Mail ID*:</label></td>
+      <td><input class="phd" type="email" placeholder="Your E-Mail ID ..." name="email" required></td>
+    </tr>
+    <tr>
+        <td><label class="element">CR Referral Code:</label></td>
+        <td><input class="phd" type="text" placeholder="Referral code of your CR (not compulsory) ..." name="ref"></td>
+    </tr>
+    <tr>
+          <td><label class="element">Mobile Number*:</label></td>
+          <td><input class="phd" type="text" placeholder="Your Mobile Number ..." name="mob" required></td>
+    </tr>
+    <tr>
+        <td><label class="element">Current College*:</label></td>
+        <td>
+          <input class="phd" placeholder="Select your college ..." formControlName="college" list="collegeList" (ngModelChange)="DynamicCollegeList(form.value.college)" required>
+          <datalist id="collegeList">
+            <div *ngFor="let clg of dcl">
+              <option >{{ clg }}</option>
+            </div>
+          </datalist>
+        </td>
+    </tr>
+    <tr>
+        <td><label class="element">Current City of Stay*:</label></td>
+        <td><input class="phd" type="text" placeholder="Your City ..." name="city" required></td>
+    </tr>
+    <tr>
+        <td><label class="element">Pin Code of College*:</label></td>
+        <td><input class="phd" type="text" placeholder="Pin code of your college ..." name="pin" required></td>
+    </tr>
+    <tr>
+        <td><label class="element">Current Address*:</label></td>
+        <td><input class="phd" type="text" placeholder="Your Current Address ..." name="curAdd" required></td>
+    </tr>
+    <tr>
+        <td><label class="element">Permanent Address*:</label></td>
+        <td><input class="phd" type="text" placeholder="Your Permanent Address ..." name="perAdd" required></td>
+    </tr>
+    <tr>
+        <td><label class="element">Current Year of Study*:</label></td>
+        <td>
+          <select class="phd" value="1" name="year" style="width: 185% !important;" required>
+            <option value = "1">First</option>
+            <option value = "2">Second</option>
+            <option value = "3">Three</option>
+            <option value = "4">Four</option>
+          </select>
+        </td>
+    </tr>
+    <tr>
+        <td><label class="element">Gender*:</label></td>
+        <td><select class="phd" placeholder="Select your gender ..." name="gender" style="width: 185% !important;" required>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Others</option>
+          </select>
+        </td>
+    </tr>
+  </table>
+  <div class="container">
+    <button class="button" type="submit">SUBMIT</button>
+  </div>
+  <br><br>
+</form>
+</div>
