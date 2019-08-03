@@ -28,6 +28,12 @@ import { RegFormComponent } from './registration/reg-form/reg-form.component';
 import { RegHomeComponent } from './registration/reg-home/reg-home.component';
 import { RegProfileComponent } from './registration/reg-profile/reg-profile.component';
 import {Ng2AutoCompleteModule} from 'ng2-auto-complete';
+import { SecurityGuidelinesComponent } from './accommodation/security-guidelines/security-guidelines.component';
+import { ReachUsComponent } from './accommodation/reach-us/reach-us.component';
+import { FaqComponent } from './accommodation/faq/faq.component';
+import { PolicyComponent } from './accommodation/policy/policy.component';
+import { KnowYourClComponent } from './accommodation/know-your-cl/know-your-cl.component';
+import { ErrorComponent } from './error/error.component';
 
 
 
@@ -52,7 +58,13 @@ import {Ng2AutoCompleteModule} from 'ng2-auto-complete';
     CompPrevWinnerComponent,
     RegFormComponent,
     RegHomeComponent,
-    RegProfileComponent
+    RegProfileComponent,
+    SecurityGuidelinesComponent,
+    ReachUsComponent,
+    FaqComponent,
+    PolicyComponent,
+    KnowYourClComponent,
+    ErrorComponent
   ],
   imports: [
     FormsModule,
@@ -60,8 +72,20 @@ import {Ng2AutoCompleteModule} from 'ng2-auto-complete';
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot([
+      
+
+
       {path:'',component:HomeComponent},
-      {path:'accommodation',component:AccommodationComponent},
+      {path:'accommodation',component:AccommodationComponent,
+      children: [
+        {path: 'security-guidelines', component: SecurityGuidelinesComponent},
+        {path: 'reach-us', component: ReachUsComponent},
+        {path: 'faq', component: FaqComponent},
+        {path: 'policy-&-charges', component: PolicyComponent},
+        {path: 'know-your-cl', component: KnowYourClComponent},
+      ]
+    },
+      
       {
         path:'registration',
         component:RegistrationComponent,
@@ -92,9 +116,12 @@ import {Ng2AutoCompleteModule} from 'ng2-auto-complete';
               {path: 'comp-reg', component:CompRegComponent},
               {path: 'comp-prev-winner', component:CompPrevWinnerComponent},
             ]
-          }
+          },
+          
         ]
       },
+      {path: '404', component: ErrorComponent},
+{ path: '**', redirectTo: '404' },
     ]),
     HttpClientModule,
     ReactiveFormsModule
