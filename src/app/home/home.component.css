@@ -1,0 +1,36 @@
+.back{
+    height:100%;
+	width:100%;
+	z-index:-3;
+	position:fixed;
+    background: #ffcdd2;
+    background-repeat: no-repeat;
+    background-position: right;
+	left:0;
+    top:0;
+    overflow: auto;
+}
+
+.fadeborder{
+    box-shadow: 0 0 15px 10px #ffcdd2;
+}
+
+.p1{
+    font-family: 'Times New Roman', Times, serif;
+    width: 50%;
+    font-size: 25px;
+}
+
+.i1{
+    width: 50%;
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+#myVideo {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+  }
