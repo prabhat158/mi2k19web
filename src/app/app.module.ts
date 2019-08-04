@@ -33,6 +33,8 @@ import { FaqComponent } from './accommodation/faq/faq.component';
 import { PolicyComponent } from './accommodation/policy/policy.component';
 import { KnowYourClComponent } from './accommodation/know-your-cl/know-your-cl.component';
 import { ErrorComponent } from './error/error.component';
+import { EventhomeComponent } from './events/eventhome/eventhome.component';
+import { EventdetailComponent } from './events/eventdetail/eventdetail.component';
 
 
 
@@ -63,7 +65,9 @@ import { ErrorComponent } from './error/error.component';
     FaqComponent,
     PolicyComponent,
     KnowYourClComponent,
-    ErrorComponent
+    ErrorComponent,
+    EventhomeComponent,
+    EventdetailComponent
   ],
   imports: [
     FormsModule,
@@ -93,7 +97,12 @@ import { ErrorComponent } from './error/error.component';
           {path: 'form', component: RegFormComponent},
         ]
       },
-      {path:'events',component:EventsComponent},
+      {path:'events',component:EventsComponent,
+      children: [
+        {path:'', component: EventhomeComponent},
+        {path:'detail', component: EventdetailComponent},
+      ]
+    },
       {path:'faqs',component:FaqsComponent},
       {path:'sponsors',component:SponsorsComponent},
       {path:'contact',component:ContactComponent},
