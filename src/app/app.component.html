@@ -1,30 +1,98 @@
-<nav style="height: 150px; margin-top: -20px; border: none" class="header navbar-inverse">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span> 
-        </button>
-        <!-- <a class="navbar-brand" href="#">WebSiteName</a> -->
-      </div>
-      <div class="collapse navbar-collapse" id="myNavbar">
-        
-        <ul style="margin-top: 30px" class="nav navbar-nav navbar-right">
-            
-                <li><a class="button1" routerLink="accommodation"><b>ACCOMMODATION</b></a></li>
-                <li><a class="button1" routerLink="registration"><b>REGISTRATION</b></a></li>
-                <li><a class="button1" routerLink="events"><b>EVENTS</b></a></li>
-                <li><a class="button1" routerLink="competition"><b>COMPETITIONS</b></a></li>
-                <li><a class="button1" routerLink="faqs"><b>FAQs</b></a></li>
-                <li><a class="button1" routerLink="sponsors"><b>SPONSORS</b></a></li>
-                <li><a style="margin-right: 25px" class="button1" routerLink="contact"><b>CONTACT US</b></a></li>
-            
-        </ul>
+<div  class="site-wrap">
+
+  <div class="site-mobile-menu site-navbar-target">
+    <div class="site-mobile-menu-header">
+      <div class="site-mobile-menu-close mt-3">
+        <span class="icon-close2 js-menu-toggle"></span>
       </div>
     </div>
-  </nav>
+    <div class="site-mobile-menu-body"></div>
+  </div>
+ 
   
+  <header style="height: 150px; margin-top: -20px " class="header site-navbar js-sticky-header site-navbar-target" role="banner">
+
+    <div class="alignheader"  >
+      <div class="row align-items-center">
+        
+        <div class="col-6 col-xl-2">
+          <!-- <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">Finances<span class="text-primary">.</span> </a></h1> -->
+        </div>
+
+        <div class="col-12 col-md-10 d-none d-xl-block">
+          <nav  class="site-navigation position-relative text-right" role="navigation">
+
+            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+              
+              <li class="has-children">
+                <a class="button1" routerLink="accommodation">ACCOMMODATION</a>
+                <ul class="dropdown">
+                    <li><a routerLink="accommodation/know-your-cl" class="nav-link">Know Your CL</a></li>
+                    <li><a routerLink="accommodation/policy-&-charges" class="nav-link">Policy & Charges</a></li>
+                    <li><a routerLink="accommodation/faq" class="nav-link">FAQ</a></li>
+                    <li><a routerLink="accommodation/reach-us" class="nav-link">Reach Us</a></li>
+                    <li><a routerLink="accommodation/security-guidelines" class="nav-link">Security Guidelines</a></li>
+                    
+                  </ul>
+              </li>
+              <li><a class="button1" routerLink="registration">REGISTRATION</a></li>
+              <li><a class="button1" routerLink="events">EVENTS</a></li>
+              <li><a class="button1" routerLink="competition">COMPETITIONS</a></li>
+              <li><a class="button1" routerLink="faqs">FAQs</a></li>
+              <li><a class="social" routerLink="sponsors">SPONSORS</a></li>
+
+              <li><a class="button1" routerLink="contact">CONTACT US</a></li>
+
+              <!-- <li class="has-children">
+                  <a href="#about-section" class="nav-link">About Us</a>
+                  <ul class="dropdown">
+                    <li><a href="#team-section" class="nav-link">Team</a></li>
+                    <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
+                  </ul>
+              </li> -->
+              
+
+              <!-- <li class="has-children">
+                <a href="#about-section" class="nav-link">About Us</a>
+                <ul class="dropdown">
+                  <li><a href="#team-section" class="nav-link">Team</a></li>
+                  <li><a href="#pricing-section" class="nav-link">Pricing</a></li>
+                  <li><a href="#faq-section" class="nav-link">FAQ</a></li>
+                  <li><a href="#gallery-section" class="nav-link">Gallery</a></li>
+                  <li><a href="#services-section" class="nav-link">Services</a></li>
+                  <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
+                  <li class="has-children">
+                    <a href="#">More Links</a>
+                    <ul class="dropdown">
+                      <li><a href="#">Menu One</a></li>
+                      <li><a href="#">Menu Two</a></li>
+                      <li><a href="#">Menu Three</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </li> -->
+              
+              
+              <!-- <li><a href="#blog-section" class="nav-link">Blog</a></li> -->
+              <!-- <li><a href="#contact-section" class="nav-link">Contact</a></li> -->
+              <!-- <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-facebook"></span></a></li>
+              <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-twitter"></span></a></li>
+              <li class="social"><a href="#contact-section" class="nav-link"><span class="icon-linkedin"></span></a></li> -->
+            </ul>
+          </nav>
+        </div>
+
+
+        <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+
+      </div>
+    </div>
+    
+  </header>
+
+
+
+   
 <div> 
 
 
@@ -73,3 +141,9 @@
 <router-outlet></router-outlet>
 </div>
 
+
+  
+
+
+</div>
+ 

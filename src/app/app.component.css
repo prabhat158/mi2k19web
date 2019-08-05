@@ -1,4 +1,11 @@
+/* @import "../assets/styles/css/style.css"; */
+@import "../assets/styles/css/bootstrap.min.css";
+@import "../assets/styles/fonts/icomoon/style.css";
 
+.alignheader{
+  margin-top: 28px; 
+  margin-right: 15px
+}
     .header{
       z-index:999; 
       background:url("../assets/images/topbar.jpg"); 
@@ -9,6 +16,9 @@
         z-index:999; 
         background:url("../assets/home/Topbarmobile.png"); 
         background-size: 100% 100%;
+      }
+      .alignheader{
+        margin-top: 15px; 
       }
     }
       

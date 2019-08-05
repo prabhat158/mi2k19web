@@ -1,3 +1,13 @@
+.back{
+    height:100%;
+	width:100%;
+	z-index:-3;
+	position:fixed;
+    background: #ffcdd2;
+	left:0;
+    top:0;
+    overflow: auto;
+}
 .bg1 {
     z-index: -3;
     width:100%;
