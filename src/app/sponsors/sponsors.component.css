@@ -22,10 +22,19 @@
     width: 20%;
     height: 35%;
     text-align: center;
+    
 }
 
+.helper {
+    display: inline-block;
+    height: 50%;
+    vertical-align: middle;
+}
+
+
 .icon img{
-    width: 200px;
+    width: 70%;
+    height: auto;
 }
 
 .icon img:hover{
@@ -49,10 +58,12 @@
 
 .icon_title{
     color: black;
+    font-size: 20px;
 }
 
 .icon_sub_title{
     color: blue;
+    font-size: 15px;
 }
 
 .left_in_one{
@@ -60,19 +71,19 @@
 }
 
 .left_in_two{
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     margin-left: 25%;
 }
 
 .right_in_two{
-    display: inline-block;
+    /* display: inline-block; */
     float: right;
     margin-right: 25%;
 }
 
 .left_in_three{
-    display: inline-block;
+    /* display: inline-block; */
     float: left;
     margin-left: 15%;
 }
@@ -83,7 +94,39 @@
 }
 
 .right_in_three{
-    display: inline-block;
+    /* display: inline-block; */
     float: right;
     margin-right: 15%;
 }
+
+
+@media only screen and (max-width: 500px) {
+        .left_in_one{
+            margin-left: 50%;
+            margin-right: 50%;
+      }
+
+      .left_in_two{
+        margin-left: 50%;
+        margin-right: 50%;
+          }
+
+      .right_in_two{
+          float: left;
+        margin-left: 50%;
+        margin-right: 50%;
+          }
+
+      .left_in_three{
+        margin-left: 50%;
+        margin-right: 50%;      }
+
+      .middle_in_three{
+        margin-left: 50%;
+        margin-right: 50%;      }
+
+      .right_in_three{
+          float: left;
+        margin-left: 50%;
+        margin-right: 50%;      }
+  }
